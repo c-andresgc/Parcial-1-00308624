@@ -10,12 +10,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Detail(
-    label: String,
-    value: String
-) {
+fun Detail(label: String, value: String) {
     Row(
         modifier = Modifier
+            .height(65.dp)
             .fillMaxWidth()
             .padding(vertical = 6.dp)
             .background(

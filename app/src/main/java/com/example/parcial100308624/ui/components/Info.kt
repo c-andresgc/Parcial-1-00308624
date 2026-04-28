@@ -2,6 +2,7 @@ package com.example.parcial100308624.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
@@ -23,11 +24,10 @@ fun Info(title: String, value: String) {
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(6.dp)
+            
         ) {
             Icon(Icons.Default.CheckCircle, null, tint = Color.White)
-
             Text(title, color = Color.Gray)
-
             Text(
                 value,
                 color = Color.White,

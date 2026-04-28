@@ -27,11 +27,12 @@ fun Balance() {
             .padding(16.dp)
     ) {
         Column {
-            Text("Total Balance", color = Color.White, fontSize = 14.sp)
-            Spacer(modifier = Modifier.height(4.dp))
+            Text("Total Balance", color = Color.White, fontSize = 18.sp)
             Text("$24,580.00", color = Color.White, fontSize = 26.sp)
             Spacer(modifier = Modifier.height(12.dp))
-            Row {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
                 Button("Add Funds")
                 Button("Withdraw")
             }

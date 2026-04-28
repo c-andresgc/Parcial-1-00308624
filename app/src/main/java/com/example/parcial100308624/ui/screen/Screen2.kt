@@ -40,11 +40,11 @@ fun Screen2() {
         Spacer(modifier = Modifier.height(20.dp))
 
         Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
                 .size(70.dp)
                 .clip(CircleShape)
-                .background(Color(0xFF00C853)),
-            contentAlignment = Alignment.Center
+                .background(Color(0xFF00C853))
         ) {
             Icon(
                 imageVector = Icons.Default.CheckCircle,
