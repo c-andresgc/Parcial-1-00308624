@@ -11,35 +11,27 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
-fun Info(
-    title: String,
-    value: String
-) {
+fun Info(title: String, value: String) {
     Box(
         modifier = Modifier
             .padding(8.dp)
-            .background(
-                color = Color(0xFF1C1F2E),
-                shape = RoundedCornerShape(16.dp)
-            )
-            .padding(16.dp)
+            .background(Color(0xFF1C1F2E), RoundedCornerShape(18.dp))
+            .padding(vertical = 20.dp, horizontal = 16.dp)
     ) {
-        Column {
-            Icon(
-                imageVector = Icons.Default.CheckCircle,
-                contentDescription = null,
-                tint = Color.White
-            )
-            Spacer(modifier = Modifier.height(8.dp))
+        Column(
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Icon(Icons.Default.CheckCircle, null, tint = Color.White)
+
+            Text(title, color = Color.Gray)
+
             Text(
-                text = title,
-                color = Color.Gray
-            )
-            Text(
-                text = value,
-                color = Color.White
+                value,
+                color = Color.White,
+                fontSize = 18.sp
             )
         }
     }
