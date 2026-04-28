@@ -13,14 +13,12 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Balance() {
-
     val gradient = Brush.horizontalGradient(
         colors = listOf(
             Color(0xFF7F00FF),
             Color(0xFFE100FF)
         )
     )
-
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -30,14 +28,13 @@ fun Balance() {
     ) {
         Column {
             Text("Total Balance", color = Color.White, fontSize = 14.sp)
-
             Spacer(modifier = Modifier.height(4.dp))
-
             Text("$24,580.00", color = Color.White, fontSize = 26.sp)
-
             Spacer(modifier = Modifier.height(12.dp))
-
-
+            Row {
+                Button("Add Funds")
+                Button("Withdraw")
+            }
         }
     }
 }
